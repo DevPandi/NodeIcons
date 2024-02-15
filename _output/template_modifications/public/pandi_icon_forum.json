@@ -1,0 +1,9 @@
+{
+    "template": "node_list_forum",
+    "description": "",
+    "execution_order": 15,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:fa icon=\"{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}\" />",
+    "replace": "<xf:if is=\"$node.pandi_own_icon == 0\">\n\t<xf:if is=\"$extras.hasNew\">\n\t\t<xf:fa icon=\"{{ $node.pandi_icon_new }}\" />\n\t<xf:else />\n\t\t<xf:fa icon=\"{{ $node.pandi_icon }}\" />\n\t</xf:if>\n<xf:else />\n\t<xf:fa icon=\"{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}\" />\n</xf:if>"
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="node_list_forum" modification_key="pandi_icon_forum" execution_order="15" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:fa icon="{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}" />]]></find>
+    <replace><![CDATA[<xf:if is="$node.pandi_own_icon == 0">
+	<xf:if is="$extras.hasNew">
+		<xf:fa icon="{{ $node.pandi_icon_new }}" />
+	<xf:else />
+		<xf:fa icon="{{ $node.pandi_icon }}" />
+	</xf:if>
+<xf:else />
+	<xf:fa icon="{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}" />
+</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="node_list_forum" modification_key="pandi_node_forum_2" execution_order="15" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:fa icon="{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}" class="subNodeLink-icon" />{$node.title}]]></find>
+    <replace><![CDATA[<xf:if is="$node.pandi_own_icon == 0">
+	<xf:if is="$extras.hasNew">
+		<xf:fa icon="{{ $node.pandi_icon_new }}" class="subNodeLink-icon" />{$node.title}
+	<xf:else />
+		<xf:fa icon="{{ $node.pandi_icon }}" class="subNodeLink-icon" />{$node.title}
+	</xf:if>
+<xf:else />
+	<xf:fa icon="{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}" class="subNodeLink-icon" />{$node.title}
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>
