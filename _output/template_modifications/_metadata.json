@@ -1,4 +1,10 @@
 {
+    "admin/dp_node_icons.json": {
+        "hash": "f9e2d82fbad10030fcd26d72dbd53169"
+    },
+    "admin/pandi_node_list_icon.json": {
+        "hash": "658596b247f0ca50a2e50303ccc36205"
+    },
     "public/pandi_icon_forum.json": {
         "hash": "26c36ee9e5caa1694d2b3a8b0cdc34c8"
     },

@@ -1,0 +1,9 @@
+{
+    "template": "node_list",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:if is=\"$typeIcon\">",
+    "replace": "<xf:if is=\"$typeIcon\">\n\t<xf:if is=\"$node.pandi_icon\">\n\t\t<xf:set var=\"$typeIcon\" value=\"{{ $node.pandi_icon }}\" />\n\t</xf:if>"
+}

@@ -1,0 +1,9 @@
+{
+    "template": "forum_edit",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro id=\"node_edit_macros::description\" arg-node=\"{$node}\" />",
+    "replace": "<xf:macro id=\"node_edit_macros::description\" arg-node=\"{$node}\" />\n<xf:textarearow name=\"node[pandi_icon]\" value=\"{$node.pandi_icon}\" autosize=\"true\"\n\t\tlabel=\"{{ phrase('pandi_node_icon') }}\"\n\t\texplain=\"{{ phrase('pandi_icon') }}\" />\n<xf:textarearow name=\"node[pandi_icon_new]\" value=\"{$node.pandi_icon_new}\" autosize=\"true\"\n\t\tlabel=\"{{ phrase('pandi_node_icon_new') }}\"\n\t\texplain=\"{{ phrase('pandi_icon') }}\" />\n"
+}
