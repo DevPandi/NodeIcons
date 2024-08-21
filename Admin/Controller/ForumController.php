@@ -10,12 +10,12 @@ class ForumController extends XFCP_ForumController {
         $icons = $this->filter(['node' => [
             'pandi_icon' => 'str',
             'pandi_icon_new' => 'str',
+            'pandi_own_icon' => 'bool'
         ]]);
-
-        file_put_contents('test.txt', print_r($icons, true));
 
         $node->set('pandi_icon', $icons['node']['pandi_icon']);
         $node->set('pandi_icon_new', $icons['node']['pandi_icon_new']);
+        $node->set('pandi_own_icon', $icons['node']['pandi_own_icon']);
 
         return parent::nodeSaveProcess($node);
     }

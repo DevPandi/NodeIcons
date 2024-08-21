@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template_modifications>
+  <modification type="admin" template="forum_edit" modification_key="dp_node_icons" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro id="node_edit_macros::description" arg-node="{$node}" />]]></find>
+    <replace><![CDATA[<xf:macro id="node_edit_macros::description" arg-node="{$node}" />
+<xf:checkboxrow>
+		<xf:option name="node[pandi_own_icon]" checked="$node.pandi_own_icon"
+			label="{{ phrase('pandi_node_own_icon') }}">
+		</xf:option>
+	</xf:checkboxrow>
+<xf:textarearow name="node[pandi_icon]" value="{$node.pandi_icon}" autosize="true"
+		label="{{ phrase('pandi_node_icon') }}"
+		explain="{{ phrase('pandi_icon') }}" />
+<xf:textarearow name="node[pandi_icon_new]" value="{$node.pandi_icon_new}" autosize="true"
+		label="{{ phrase('pandi_node_icon_new') }}"
+		explain="{{ phrase('pandi_icon') }}" />
+]]></replace>
+  </modification>
+  <modification type="admin" template="node_list" modification_key="pandi_node_list_icon" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:if is="$typeIcon">]]></find>
+    <replace><![CDATA[<xf:if is="$typeIcon">
+	<xf:if is="$node.pandi_icon">
+		<xf:set var="$typeIcon" value="{{ $node.pandi_icon }}" />
+	</xf:if>]]></replace>
+  </modification>
   <modification type="public" template="node_list_forum" modification_key="pandi_icon_forum" execution_order="15" enabled="1" action="str_replace">
     <find><![CDATA[<xf:fa icon="{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}" />]]></find>
-    <replace><![CDATA[<xf:if is="$node.pandi_own_icon == 0">
+    <replace><![CDATA[<xf:if is="$node.pandi_own_icon == 1">
 	<xf:if is="$extras.hasNew">
 		<xf:fa icon="{{ $node.pandi_icon_new }}" />
 	<xf:else />
@@ -14,7 +37,7 @@
   </modification>
   <modification type="public" template="node_list_forum" modification_key="pandi_node_forum_2" execution_order="15" enabled="1" action="str_replace">
     <find><![CDATA[<xf:fa icon="{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}" class="subNodeLink-icon" />{$node.title}]]></find>
-    <replace><![CDATA[<xf:if is="$node.pandi_own_icon == 0">
+    <replace><![CDATA[<xf:if is="$node.pandi_own_icon == 1">
 	<xf:if is="$extras.hasNew">
 		<xf:fa icon="{{ $node.pandi_icon_new }}" class="subNodeLink-icon" />{$node.title}
 	<xf:else />
