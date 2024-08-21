@@ -12,7 +12,7 @@ class Setup extends AbstractSetup
         $this->schemaManager()->alterTable(
             'xf_node',
             function (Alter $node_table) {
-                $node_table->addColumn('pandi_own_icon', 'boolean')->setDefault(0);
+                $node_table->addColumn('pandi_own_icon', 'tinyint')->setDefault(0);
                 $node_table->addColumn('pandi_icon', 'varchar')->length(255)->setDefault('far fa-paw');
                 $node_table->addColumn('pandi_icon_new', 'varchar')->length(255)->setDefault('fas fa-paw');
             }
