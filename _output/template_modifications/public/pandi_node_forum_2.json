@@ -5,5 +5,5 @@
     "enabled": true,
     "action": "str_replace",
     "find": "<xf:fa icon=\"{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}\" class=\"subNodeLink-icon\" />{$node.title}",
-    "replace": "<xf:if is=\"$node.pandi_own_icon == 1\">\n\t<xf:if is=\"$extras.hasNew\">\n\t\t<xf:fa icon=\"{{ $node.pandi_icon_new }}\" class=\"subNodeLink-icon\" />{$node.title}\n\t<xf:else />\n\t\t<xf:fa icon=\"{{ $node.pandi_icon }}\" class=\"subNodeLink-icon\" />{$node.title}\n\t</xf:if>\n<xf:else />\n\t<xf:fa icon=\"{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}\" class=\"subNodeLink-icon\" />{$node.title}\n</xf:if>"
+    "replace": "<xf:if is=\"$node.pandi_own_icon\">\n\t<xf:if is=\"$extras.hasNew\">\n\t\t<xf:fa icon=\"{{ $node.pandi_icon_new }}\" class=\"subNodeLink-icon\" />{$node.title}\n\t<xf:else />\n\t\t<xf:fa icon=\"{{ $node.pandi_icon }}\" class=\"subNodeLink-icon\" />{$node.title}\n\t</xf:if>\n<xf:else />\n\t<xf:fa icon=\"{{ $node.Data.TypeHandler.getTypeIconClass() ?: 'fa-comments' }}\" class=\"subNodeLink-icon\" />{$node.title}\n</xf:if>"
 }
