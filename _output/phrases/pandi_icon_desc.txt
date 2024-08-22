@@ -1,0 +1,1 @@
+Specifies the FontAwesome class of the icon. You can also specify your own style. <em>fas fa-icons</em> is displayed as {icon:fas::icons}. You can found the names in the <a href="https://fontawesome.com/v5/icons/i" class="link link-external" target="_blank">FontAwesome 5 documentation</a>.

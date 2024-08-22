@@ -1,0 +1,26 @@
+{
+    "pandi_icon_desc.txt": {
+        "global_cache": false,
+        "version_id": 1000031,
+        "version_string": "1.0.0 Beta 1",
+        "hash": "7a682432da444e6a504ac14f25bd09fd"
+    },
+    "pandi_node_icon.txt": {
+        "global_cache": false,
+        "version_id": 1000031,
+        "version_string": "1.0.0 Beta 1",
+        "hash": "58c169d4abad90e45a3e9e729e2708d1"
+    },
+    "pandi_node_icon_new.txt": {
+        "global_cache": false,
+        "version_id": 1000031,
+        "version_string": "1.0.0 Beta 1",
+        "hash": "84297ca3db75f16895a1bc87df845a83"
+    },
+    "pandi_node_own_icon.txt": {
+        "global_cache": false,
+        "version_id": 1000031,
+        "version_string": "1.0.0 Beta 1",
+        "hash": "848b916e9e5a96ffbdd7ad7437bad65a"
+    }
+}

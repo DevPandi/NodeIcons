@@ -10,10 +10,10 @@
 	</xf:checkboxrow>
 <xf:textarearow name="node[pandi_icon]" value="{$node.pandi_icon}" autosize="true"
 		label="{{ phrase('pandi_node_icon') }}"
-		explain="{{ phrase('pandi_icon') }}" />
+		explain="{{ phrase('pandi_icon_desc') }}" />
 <xf:textarearow name="node[pandi_icon_new]" value="{$node.pandi_icon_new}" autosize="true"
 		label="{{ phrase('pandi_node_icon_new') }}"
-		explain="{{ phrase('pandi_icon') }}" />
+		explain="{{ phrase('pandi_icon_desc') }}" />
 ]]></replace>
   </modification>
   <modification type="admin" template="node_list" modification_key="pandi_node_list_icon" execution_order="10" enabled="1" action="str_replace">

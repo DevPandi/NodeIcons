@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<phrases/>
+<phrases>
+  <phrase title="pandi_icon_desc" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Specifies the FontAwesome class of the icon. You can also specify your own style. <em>fas fa-icons</em> is displayed as {icon:fas::icons}. You can found the names in the <a href="https://fontawesome.com/v5/icons/i" class="link link-external" target="_blank">FontAwesome 5 documentation</a>.]]></phrase>
+  <phrase title="pandi_node_icon" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Icon (no new Content)]]></phrase>
+  <phrase title="pandi_node_icon_new" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Icon (new content)]]></phrase>
+  <phrase title="pandi_node_own_icon" version_id="1000031" version_string="1.0.0 Beta 1"><![CDATA[Use own icons]]></phrase>
+</phrases>
